@@ -5,4 +5,5 @@
             :url  "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0-alpha14" :scope "provided"]
                  [org.clojure/core.async "0.3.465" :scope "provided"]
-                 [starcity/toolbelt-core "0.2.0"]])
+                 [starcity/toolbelt-core "0.2.0"]]
+  :deploy-repositories [["releases" :clojars]])
