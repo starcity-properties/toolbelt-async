@@ -11,10 +11,12 @@
     (async/put! c sentinel)
     c))
 
+
 (defn- throwable-chan []
   (let [c (async/chan)]
     (async/put! c (ex-info "throwable" {}))
     c))
+
 
 (deftest testing-<!!?
   (testing "it performs like core.async `<!!` when taking non-throwables"
@@ -22,3 +24,8 @@
 
   (testing "it throws exceptions when taking throwables"
     (is (thrown? clojure.lang.ExceptionInfo (<!!? (throwable-chan))))))
+
+
+(deftest testing-chan?
+  (is (chan? (async/chan)))
+  (is (not (chan? :not-a-chan))))

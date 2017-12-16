@@ -25,3 +25,6 @@
   `(go (try ~@body
             (catch #?(:clj Throwable :cljs js/Error) ex#
               ex#))))
+
+(defn chan? [x]
+  (satisfies? clojure.core.async.impl.protocols/Channel x))
