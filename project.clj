@@ -1,4 +1,4 @@
-(defproject starcity/toolbelt-async "0.4.0"
+(defproject starcity/toolbelt-async "0.5.0-SNAPSHOT"
   :description "Utilities for working with core.async"
   :url "https://github.com/starcity-properties/toolbelt-async"
   :license {:name "Eclipse Public License"
